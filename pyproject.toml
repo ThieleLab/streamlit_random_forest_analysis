@@ -72,7 +72,8 @@ version = { attr = "fastforest._version.__version__" }
 [tool.ruff]
 line-length = 100
 target-version = "py310"
-extend-exclude = ["results", "benchmarks/data"]
+# make_figures.py is frozen with paper draft v0.1 (tag paper-v0.1); lint it when the paper is next edited
+extend-exclude = ["results", "benchmarks/data", "paper/softwarex/make_figures.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "NPY", "RUF100"]
